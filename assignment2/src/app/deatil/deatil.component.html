@@ -1,0 +1,28 @@
+<app-header></app-header>
+<h1>User Detail</h1>
+<div *ngFor="let de of details">
+<mat-card *ngIf="de.id<=5">
+    <h2>{{de.name}}</h2>
+    <img src="../../assets/user.png">
+    <table>
+        <tr>
+            <td><b>username:</b> {{de.username}}</td>
+        </tr>
+        <tr>
+            <td><b>email :</b> {{de.email}}</td>
+        </tr>
+        <tr>
+            <td><b>address :</b> {{de.address.street}}<br>{{de.address.suite}}<br>{{de.address.city}}<br>{{de.address.zipcode}}</td>
+            <!--<td class="add1">{{de.address.suite}}</td>
+            <td class="add2"> {{de.address.city}}</td>
+            <td class="add3">{{de.address.zipcode}}</td>-->
+        </tr>
+        <tr>
+            <td><b>Phone : </b>{{de.phone}}</td>
+        </tr>
+        <tr>
+            <td><b>Company : </b>{{de.company.name}}</td>
+        </tr>
+    </table>
+</mat-card>
+</div>

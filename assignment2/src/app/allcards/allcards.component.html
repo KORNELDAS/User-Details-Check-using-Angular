@@ -1,0 +1,17 @@
+<div style="display: inline-block; width: 30%" *ngFor="let d of data">
+<mat-card *ngIf="d.id<=5">
+    <div>
+    <h2>{{d.name}}</h2>
+</div>
+<img src="../../assets/user.png">
+<table>
+    <tr>
+       <td><b>{{d.address.city}}</b></td>
+    </tr>
+    <tr>
+       <td><b>{{d.email}}</b></td>
+    </tr>
+    </table>
+    <button  routerLink="/detail" (click)="btnclk($event)" id="{{d.id}}">More Details</button>
+</mat-card>
+</div>
